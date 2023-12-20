@@ -1,0 +1,21 @@
+<div class="myBtn">
+        <h1>Bienvenido:{{user.username}}</h1>
+        <p>Email: {{user.email}}</p>
+        <p>Roll: {{user.role}}</p>
+        <button class="currentbotons"><a href="/api/auth/logout" class="currenthref">Cerrar sesión</a></button></a>
+        <button class="currentbotons"><a href="/chat" class="currenthref">Chat</a></button></a>
+        {{#if user.isPremiumOrAdmin}}
+        <button class="currentbotons"><a href="http://localhost:8080/create-product-panel/" class="currenthref">Create Product Panel</a></button></a>
+        {{/if}}
+        {{#if user.isAdmin}}
+        <button class="currentbotons"><a href="http://localhost:8080/panel/" class="currenthref">PANEL</a></button>
+        {{/if}}
+</div>
+<div id="ticket"></div>
+<div id="carrito">
+</div>
+<div id="contenedor">
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/products.js"></script>
+<script src="/js/cart.js"></script>

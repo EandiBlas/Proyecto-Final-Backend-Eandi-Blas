@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div id="contenedor">
+            <form id="loginForm">
+                <h2 class="loginForm-h2">Login</h2>
+                <div class="input-group">
+                    <label for="username">Usuario</label>
+                    <div class="input-container">
+                        <input class="controls" type="username" name="username" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="input-container">
+                        <input class="controls" type="password" name="password" required>
+                    </div>
+                </div>
+                <button class="botons" type="submit" > Ingresar </button>
+                <p class="loginForm-p">No estás registrado? <a href="/register" class="loginForm-href">Regístrate aquí</a></p>
+                <p class="loginForm-p">Olvidaste tu contraseña? <a href="/forgot-password/" class="loginForm-href">Restablecela aquí</a></p>
+            </form>
+    </div>
+</body>
+<script src="/js/login.js"></script>
+</html>

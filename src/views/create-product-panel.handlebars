@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div id="contenedor">
+        <form method="POST" id="loginForm" action="/api/products/">
+            <h2>Create Products Panel</h2>
+            <input class="controls" type="text" name="title" id="title" placeholder="Ingrese Nombre del Producto" required>
+            <input class="controls" type="text" name="description" id="description" placeholder="Ingrese description" required>
+            <input class="controls" type="number" name="stock" id="stock" placeholder="Ingrese su stock" required>
+            <input class="controls" type="text" name="thumbnail" id="thumbnail" placeholder="Ingrese su imagen url" required>
+            <input class="controls" type="text" name="category" id="category" placeholder="Ingrese categoria" required>
+            <input class="controls" type="number" name="price" id="price" placeholder="Ingrese su precio" required>
+            <input class="controls" type="text" name="code" id="code" placeholder="Ingrese su code" required>
+            <button class="botons" type="submit" > Registrar </button>
+        </form>
+        {{!-- <form method="DELETE" id="loginForm" action="/api/products/">
+            <h2> Para eliminar un producto:</h2>
+            <input class="controls" type="text" name="id-prod" id="add-btn-botons" placeholder="Ingrese ID" >
+            <button class="botons" type="submit" id="delete-btn">Eliminar</button>
+        </form> --}}
+    </div>
+</body>
+</html>

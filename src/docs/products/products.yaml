@@ -1,0 +1,212 @@
+paths:
+  /api/products:
+    post:
+      summary: Método para crear productos.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                description:
+                  type: string
+                price:
+                  type: number
+                stock:
+                  type: number
+                thumbnail:
+                  type: string
+                code:
+                  type: string
+                category:
+                  type: string
+      responses:
+        201:
+          description: Respuesta exitosa
+          content:
+            application/json:
+              examples:
+                success:
+                  value:
+                    message: "Producto creado"
+        400:
+          description: Error
+          content:
+            application/json:
+              examples:
+                missing_data:
+                  value:
+                    error: "Faltan datos al crear el producto"
+                duplicate_code:
+                  value:
+                    error: "El código del producto ya existe"
+
+
+    get:
+      summary: Método para obtener la lista de productos
+      parameters:
+        - name: limit
+          in: query
+          description: Completar con el límite de resultados por página
+          schema:
+            type: integer
+        - name: page
+          in: query
+          description: Completar con el número de página
+          schema:
+            type: integer
+        - name: category
+          in: query
+          description: Completar con la búsqueda por Categoría
+          schema:
+            type: string
+        - name: sort
+          in: query
+          description: Completar con ('asc' o 'desc') filtrar los precios
+          schema:
+            type: string
+      responses:
+        200:
+          description: Respuesta exitosa
+          content:
+            application/json:
+              examples:
+                success:
+                  value:
+                    message: "Lista de productos obtenida"
+        400:
+          description: Error
+          content:
+            application/json:
+              examples:
+                error:
+                  value:
+                    error: "Se ha producido un error al traer los productos"
+
+
+  /api/products/{pid}:
+    get:
+      summary: Método para obtener un producto por su respectivo ID
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          description: Completar con el ID del producto a obtener
+          schema:
+            type: string
+      responses:
+        200:
+          description: Respuesta exitosa
+          content:
+            application/json:
+              examples:
+                success:
+                  value:
+                    message: "Producto obtenido con exito"
+        404:
+          description: Error
+          content:
+            application/json:
+              examples:
+                error:
+                  value:
+                    error: "Producto no encontrado"
+
+
+
+    put:
+      summary: Método para modificar un respectivo producto por su ID
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          description: Completar con el ID del producto a actualizar
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: { "title": "New title" }
+      responses:
+        200:
+          description: Respuesta exitosa
+          content:
+            application/json:
+              examples:
+                success:
+                  value:
+                    message: "Producto actualizado"
+        403:
+          description: Error
+          content:
+            application/json:
+              examples:
+                Middlewares_Error:
+                  value:
+                    error: "Acceso no autorizado"
+        404:
+          description: Error
+          content:
+            application/json:
+              examples:
+                error:
+                  value:
+                    error: "Producto no encontrado"
+        500:
+          description: Error
+          content:
+            application/json:
+              examples:
+                error:
+                  value:
+                    error: "Error al actualizar el producto"
+
+
+
+    delete:
+      summary: Método para eliminar un respectivo producto por su ID
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          description: Completar con el ID del producto a eliminar
+          schema:
+            type: string
+      responses:
+        200:
+          description: Respuesta exitosa
+          content:
+            application/json:
+              examples:
+                success:
+                  value:
+                    message: "Producto eliminado"
+        403:
+          description: Error
+          content:
+            application/json:
+              examples:
+                Middlewares_Error:
+                  value:
+                    error: "No tienes permiso para realizar esta acción"
+        404:
+          description: Error
+          content:
+            application/json:
+              examples:
+                error:
+                  value:
+                    error: "Producto no encontrado"
+        500:
+          description: Error
+          content:
+            application/json:
+              examples:
+                error:
+                  value:
+                    error: "Error al eliminar el producto"

@@ -1,0 +1,17 @@
+<div id="contenedor">
+    {{#each user}}
+    <div>
+        <div>
+            <h5>FIRST NAME: {{first_name}}</h5>
+            <p>LAST NAME: {{last_name}}</p>
+            <p>USERNAME: {{username}}</p>
+            <p>EMAIL: {{email}}</p>
+            <p>ROLE: {{role}}</p>
+            <button onclick="changerole('{{username}}')">Change Role</button>
+            <button onclick="deleteUser('{{username}}')">Delete User</button>
+        </div>
+        <hr>
+    {{/each}}
+</div>
+<script src="/js/paneladmin.js"></script>
+

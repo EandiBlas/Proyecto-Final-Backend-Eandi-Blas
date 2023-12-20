@@ -1,0 +1,497 @@
+body {
+    height: 100vh;
+    background-color: #444141;
+    font-family: 'Poppins', sans-serif;
+}
+
+#contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#formProduct {
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    border-radius: 4px;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+#formProducth4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+
+.controls {
+    display: inline-block;
+    background: #2b3947;
+    padding: 10px 16px;
+    border: 1px solid #747474;
+    border-radius: 4px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#formProduct p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+#formProduct h2 {
+    height: 40px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+#formProduct a {
+    color: white;
+    text-decoration: none;
+}
+
+#formProduct a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+#formProduct .botons {
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.myBtn {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: end;
+}
+
+.myBtn h1,
+p {
+    padding-right: 0.5rem;
+}
+
+.mybutton {
+    font-size: 1.3rem;
+    background-color: black;
+    color: aliceblue;
+}
+
+.mybutton:hover {
+    background-color: rgb(58, 57, 57);
+    color: aliceblue;
+}
+
+.btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+  
+.btn:hover {
+    background-color: #0076ad;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.2rem solid #000000;
+    border-radius: 0.5rem;
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    text-align: center;
+}
+
+.card img {
+    width: 240px;
+    height: 240px;
+    border: 0.2rem solid #000000;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.cart-item {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.cart-item-image {
+    width: 240px;
+    height: 240px;
+    border: 0.2rem solid #000000;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-title {
+    margin: 1rem;
+    padding: 0.2rem;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.cart-item-category,
+.cart-item-id,
+.cart-item-description {
+    margin: 1rem;
+    padding: 0.1rem;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.cart-item-price {
+    margin: 1rem;
+    padding: 0.1rem;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff5733;
+    margin-bottom: 5px;
+}
+
+.cart-item-quantity {
+    margin: 1rem;
+    padding: 0.1rem;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.remove-from-cart {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 150px;
+    height: 50px; /* Ajustamos el ancho del botón */
+}
+
+.remove-from-cart:hover {
+    background-color: #c82333;
+}
+
+.finalize-purchase {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 150px;
+    height: 50px; /* Ajustamos el ancho del botón */
+}
+
+.finalize-purchase:hover {
+    background-color: #c82333;
+}
+
+
+
+
+.mytitulo {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.mydescripcion {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.myboton {
+    font-size: 1.3rem;
+    background-color: black;
+    color: aliceblue;
+}
+
+.myboton:hover {
+    background-color: rgb(58, 57, 57);
+    color: aliceblue;
+}
+
+.mydivrestysuma {
+    display: flex;
+    justify-content: center;
+}
+
+.restarCantidad {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.5rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.sumarCantidad {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.5rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.mycarrito {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-cart-plus {
+    font-size: 1.5rem;
+}
+
+#registerForm {
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    border-radius: 4px;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+
+#registerForm label {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+#registerForm p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+#registerForm h2 {
+    height: 40px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+#registerForm a {
+    color: #1f53c5;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#registerForm a:hover {
+    color: #1a48ac;
+}
+
+#registerForm input {
+    height: 20px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#registerForm .botons {
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#registerForm .botons:hover {
+    background: #1a48ac;
+}
+
+#loginForm {
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    border-radius: 4px;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+
+#loginForm label {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+#loginForm p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+#loginForm h2 {
+    height: 40px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+#loginForm a {
+    color: #1f53c5;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#loginForm a:hover {
+    color: #1a48ac;
+}
+
+#loginForm input {
+    height: 20px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#loginForm .botons {
+    width: 253px;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#loginForm .botons:hover {
+    background: #1a48ac;
+}
+
+#cart {
+    display: none;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.loginForm-href {
+    text-decoration: none;
+    color: #194092;
+    font-weight: bold;
+}
+
+.loginForm-p {
+    color: #797b80;
+    font-weight: bold;
+}
+
+.loginForm-h2 {
+    color: #b3b5b8;
+}
+
+.input-group {
+    margin: 10px 0;
+}
+
+.input-group label {
+    text-align: left;
+    font-weight: bold;
+    display: block;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.currentbotons {
+    width: 150px;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.currentbotons:hover {
+    background: #1a48ac;
+}
+
+.currenthref {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.ticket-details {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+  
+.ticket-title {
+    font-size: 1.2em;
+    color: #000000;
+    margin-bottom: 5px;
+    text-align: center;
+}
+  
+.ticket-category, .ticket-description {
+    font-size: 1.2em;
+    color: #000000;
+    margin-bottom: 3px;
+}

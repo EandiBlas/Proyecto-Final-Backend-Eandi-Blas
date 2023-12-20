@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Carga de Documentos</title>
+</head>
+<body>
+<form action="/auth/:uid/documents" method="post" enctype="multipart/form-data">
+  <!-- Otros campos del formulario si es necesario -->
+  <label for="files">Seleccionar archivos:</label>
+  <input type="file" name="files" id="files" multiple>
+  <button type="submit">Subir Documentos</button>
+</form>
+
+
+  <script>
+    const form = new FormData();
+    form.append('files', fileInput.files[0]);
+
+    fetch('/auth/:uid/documents', {
+    method: 'POST',
+    body: form
+    });
+
+  </script>
+
+</body>
+</html>
